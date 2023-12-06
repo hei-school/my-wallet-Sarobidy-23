@@ -1,0 +1,7 @@
+//The presence of a tsconfig.json file in a directory indicates that the directory is the root of a TypeScript project.
+{
+  "compilerOptions": {
+    "module": "commonjs"
+  },
+  "include": ["src/**/*"]
+}
