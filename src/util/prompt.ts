@@ -5,13 +5,14 @@ const interfaces = readline.createInterface({
   output: process.stdout,
 });
 
-const record = (question: string): Promise<string> => {
+export const record = (question: string): Promise<string> => {
   return new Promise((resolve) => {
     interfaces.question(question, (response: string) => {
-      interfaces.close();
       resolve(response);
     });
   });
 };
 
-export { record };
+export const closeRecord = () => {
+  interfaces.close();
+};
